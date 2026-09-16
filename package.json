@@ -13,6 +13,7 @@
     "vite": "^8.3.0"
   },
   "dependencies": {
+    "inter-ui": "^4.1.1",
     "sharp": "^0.35.4",
     "svgo": "^4.1.0",
     "vite-plugin-image-optimizer": "^2.0.3"

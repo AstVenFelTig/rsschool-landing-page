@@ -1,0 +1,75 @@
+@use "./variables.scss" as *;
+
+@mixin header-text {
+    font-style: Semi Bold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.header__box {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header__logo {
+        width: 100px;
+        object-fit: cover;
+    }
+    .header__nav {
+        .header__list {
+            display: flex;
+            gap: 40px;
+            .header__item {
+                .header__link {
+                    position: relative;
+                    @include header-text;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -3px;
+                        height: 2px;
+                        background: rgba(64, 63, 61, 1);
+
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        transition: transform 0.5s ease;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+    .header__menu {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        margin-left: 44px;
+        .header__thems {
+            width: 88px;
+            height: 44px;
+            border: 1px solid rgba(193, 182, 173, 1);
+            border-radius: 100px;
+            background-image: url(../assets/svg/Themeswitch.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .header__thems-active {
+            background-image: url(../assets/svg/ThemeswitchOnn.svg);
+        }
+        .header__burger {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}
