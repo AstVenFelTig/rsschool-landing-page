@@ -1,0 +1,15 @@
+<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.000000" height="60.000000" fill="none" customFrame="url(#clipPath_0)">
+	<defs>
+		<clipPath id="clipPath_0">
+			<rect width="60.000000" height="60.000000" x="0.000000" y="0.000000" rx="30.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<clipPath id="clipPath_1">
+			<rect width="24.000000" height="24.000000" x="18.000000" y="18.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<g id="arrow-right" clip-path="url(#clipPath_1)" customFrame="url(#clipPath_1)">
+		<rect id="arrow-right" width="24.000000" height="24.000000" x="18.000000" y="18.000000" />
+		<path id="Vector" d="M12.5 6L0 6M6 12L0 6L6 0" stroke="rgb(64,63,61)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.000000" transform="matrix(-1,0,0,1,36.5,24)" />
+	</g>
+	<rect id="button-icon-dark" width="59.000000" height="59.000000" x="0.500000" y="0.500000" rx="29.500000" stroke="rgb(102,95,85)" stroke-width="1.000000" />
+</svg>
