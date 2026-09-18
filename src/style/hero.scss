@@ -23,7 +23,7 @@
                 color: rgba(176, 144, 122, 1);
             }
         }
-        @media (max-width: 900px) {
+        @media (max-width: 530px) {
             .hero__title {
                 font-size: 42px;
                 line-height: 115%;
@@ -94,7 +94,7 @@
             padding: 100px 60px;
         }
     }
-    @media (max-width: 5300px) {
+    @media (max-width: 530px) {
         .hero__box {
             padding: 60px 16px;
         }
