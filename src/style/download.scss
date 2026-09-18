@@ -24,6 +24,12 @@
                 color: $accent;
             }
         }
+        @media (max-width: 530px) {
+            .download__title {
+                max-width: 320px;
+                font-size: 32px;
+            }
+        }
         .download__text {
             max-width: 600px;
             font-weight: 400;
@@ -73,6 +79,11 @@
                 }
             }
         }
+        @media (max-width: 530px) {
+            .download__box-app {
+                flex-direction: column;
+            }
+        }
     }
     @media (max-width: 900px) {
         .download__col-left {
@@ -97,10 +108,23 @@
             background-position: 50% 65%;
         }
     }
+    @media (max-width: 530px) {
+        .download__col-right {
+            flex-basis: 348px;
+            background-position: 70% 0%;
+            background-size: 100%;
+        }
+    }
 }
 @media (max-width: 900px) {
     .download__box {
         flex-direction: column;
         gap: 100px;
+    }
+}
+@media (max-width: 530px) {
+    .download__box {
+        flex-direction: column;
+        gap: 40px;
     }
 }

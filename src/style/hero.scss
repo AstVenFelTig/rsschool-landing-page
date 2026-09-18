@@ -23,6 +23,12 @@
                 color: rgba(176, 144, 122, 1);
             }
         }
+        @media (max-width: 900px) {
+            .hero__title {
+                font-size: 42px;
+                line-height: 115%;
+            }
+        }
         .hero__text {
             max-width: 530px;
             color: $inverse;
@@ -86,6 +92,11 @@
     @media (max-width: 900px) {
         .hero__box {
             padding: 100px 60px;
+        }
+    }
+    @media (max-width: 5300px) {
+        .hero__box {
+            padding: 60px 16px;
         }
     }
 }

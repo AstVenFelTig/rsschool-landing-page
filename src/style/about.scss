@@ -14,6 +14,11 @@
         font-style: italic;
     }
 }
+@media (max-width: 530px) {
+    .about__text {
+        font-size: 32px;
+    }
+}
 .about__box {
     display: flex;
     gap: 40px;
@@ -42,6 +47,11 @@
         @media (max-width: 900px) {
             .about__img:first-child {
                 background-size: 105%;
+            }
+        }
+        @media (max-width: 530px) {
+            .about__img:first-child {
+                background-size: 210% 125%;
             }
         }
         .about__img:last-child {
@@ -84,6 +94,11 @@
         @media (max-width: 900px) {
             .about__img:last-child {
                 background-size: 105%;
+            }
+        }
+        @media (max-width: 530px) {
+            .about__img:last-child {
+                background-size: 210% 125%;
             }
         }
     }

@@ -12,7 +12,11 @@
         color: $accent;
     }
 }
-
+@media (max-width: 530px) {
+    .slider__title {
+        font-size: 32px;
+    }
+}
 .slider__box {
     position: relative;
     z-index: 1;
@@ -54,6 +58,11 @@
                 line-height: 125%;
                 letter-spacing: 0%;
                 text-align: center;
+            }
+        }
+        @media (max-width: 5300px) {
+            .slider__slide {
+                max-width: 348px;
             }
         }
     }

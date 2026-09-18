@@ -130,4 +130,14 @@
             gap: 24px;
         }
     }
+    @media (max-width: 530px) {
+        .header__menu {
+            margin-left: 0px;
+        }
+    }
+    @media (max-width: 900px) {
+        .header__menu {
+            gap: 12px;
+        }
+    }
 }
