@@ -45,3 +45,9 @@ a:active {
     margin: 0 auto;
     background-color: $page;
 }
+
+@media (max-width: 320px) {
+    .container {
+        padding: 0px 20px;
+    }
+}

@@ -46,30 +46,88 @@
             }
         }
     }
+    @media (max-width: 900px) {
+        .header__nav {
+            display: none;
+        }
+    }
     .header__menu {
         display: flex;
-        gap: 24px;
+        gap: 10px;
         align-items: center;
-        margin-left: 44px;
+        margin-left: 43px;
         .header__thems {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px;
             width: 88px;
             height: 44px;
             border: 1px solid rgba(193, 182, 173, 1);
             border-radius: 100px;
-            background-image: url(../assets/svg/Themeswitch.svg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+
             cursor: pointer;
+            svg {
+                width: 36px;
+            }
+            .header__moon {
+                display: flex;
+                align-items: center;
+                border-radius: 40px;
+                width: 36px;
+                height: 36px;
+                transition: all 0.5s ease;
+            }
+        }
+        @media (max-width: 900px) {
+            .header__thems {
+                height: 52px;
+                width: 104px;
+                svg {
+                    width: 44px;
+                }
+            }
         }
         .header__thems-active {
-            background-image: url(../assets/svg/ThemeswitchOnn.svg);
+            background-color: $container;
+            color: $inverse;
         }
         .header__burger {
             display: flex;
-            gap: 5px;
+            gap: 8px;
             align-items: center;
             cursor: pointer;
+
+            @media (max-width: 900px) {
+                .header__span-menu,
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 900px) {
+            .header__burger {
+                border-radius: 100px;
+                width: 44px;
+                height: 44px;
+                border: 1px solid rgba(102, 95, 85, 1);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                .footer__line {
+                    width: 16px;
+                    height: 2px;
+                    background-color: rgba(64, 63, 61, 1);
+                }
+            }
+        }
+    }
+    @media (max-width: 900px) {
+        .header__menu {
+            gap: 24px;
         }
     }
 }
