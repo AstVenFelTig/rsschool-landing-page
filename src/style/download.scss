@@ -74,6 +74,15 @@
             }
         }
     }
+    @media (max-width: 900px) {
+        .download__col-left {
+            padding: 0px;
+            flex: 0;
+            .download__text {
+                max-width: 670px;
+            }
+        }
+    }
 
     .download__col-right {
         flex: 1;
@@ -81,5 +90,17 @@
         background-repeat: no-repeat;
         background-position: 100% 15%;
         background-size: 93%;
+    }
+    @media (max-width: 900px) {
+        .download__col-right {
+            flex-basis: 630px;
+            background-position: 50% 65%;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .download__box {
+        flex-direction: column;
+        gap: 100px;
     }
 }
