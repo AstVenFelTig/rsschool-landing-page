@@ -14,6 +14,9 @@
         font-style: italic;
     }
 }
+.about__text-dark {
+    color: $page;
+}
 @media (max-width: 530px) {
     .about__text {
         font-size: 32px;

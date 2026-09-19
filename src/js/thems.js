@@ -20,6 +20,7 @@ export default function thems() {
   const sliderArrowLeft = document.querySelector(".slider__arrow-left");
   const sliderArrowRight = document.querySelector(".slider__arrow-right");
   const sliderPagination = document.querySelectorAll(".slider__pagination");
+  const aboutText = document.querySelector(".about__text");
 
   if (!headerThems) return;
 
@@ -34,6 +35,7 @@ export default function thems() {
     sliderArrows.classList.toggle("slider__arrows-dark");
     sliderArrowLeft.classList.toggle("slider__arrows-dark");
     sliderArrowRight.classList.toggle("slider__arrows-dark");
+    aboutText.classList.toggle("about__text-dark");
 
     container.forEach((elem) => {
       elem.classList.toggle("containner-dark");
