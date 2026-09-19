@@ -21,6 +21,11 @@ export default function thems() {
   const sliderArrowRight = document.querySelector(".slider__arrow-right");
   const sliderPagination = document.querySelectorAll(".slider__pagination");
   const aboutText = document.querySelector(".about__text");
+  const downloadTitle = document.querySelector(".download__title");
+  const downloadText = document.querySelector(".download__text");
+  const downloadColRight = document.querySelector(".download__col-right");
+  const downloadSpan = document.querySelectorAll(".download__span");
+  const downloadIcon = document.querySelectorAll(".download__icon");
 
   if (!headerThems) return;
 
@@ -36,6 +41,11 @@ export default function thems() {
     sliderArrowLeft.classList.toggle("slider__arrows-dark");
     sliderArrowRight.classList.toggle("slider__arrows-dark");
     aboutText.classList.toggle("about__text-dark");
+    downloadTitle.classList.toggle("download__title-dark");
+    downloadText.classList.toggle("download__text-dark");
+    downloadColRight.classList.toggle("download__col-right-Dark");
+    downloadIcon[0].classList.toggle("download__icon-dark");
+    downloadIcon[1].classList.toggle("download__icon-dark");
 
     container.forEach((elem) => {
       elem.classList.toggle("containner-dark");
@@ -49,6 +59,10 @@ export default function thems() {
       elem.classList.toggle("slider__pagination-dark");
     });
     sliderPagination[0].classList.toggle("slider__pagination-dark-active");
+
+    downloadSpan.forEach((elem) => {
+      elem.classList.toggle("download__span-dark");
+    });
 
     moon.className.includes("active")
       ? (headerLogo.src = imgLogoDark)

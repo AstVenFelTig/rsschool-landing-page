@@ -24,6 +24,9 @@
                 color: $accent;
             }
         }
+        .download__title-dark {
+            color: $page;
+        }
         @media (max-width: 530px) {
             .download__title {
                 max-width: 320px;
@@ -36,6 +39,9 @@
             font-size: 16px;
             line-height: 150%;
             color: $Overlay;
+        }
+        .download__text-dark {
+            color: $page;
         }
         .download__box-app {
             display: flex;
@@ -70,11 +76,20 @@
                         line-height: 150%;
                         color: $Overlay;
                     }
+                    .download__span-dark:first-child {
+                        color: $page;
+                    }
+                    .download__span-dark:last-child {
+                        color: $page;
+                    }
                 }
                 &:hover > .download__app-text > .download__span {
                     color: $page;
                 }
                 &:hover > .download__icon {
+                    color: $page;
+                }
+                .download__icon-dark {
                     color: $page;
                 }
             }
@@ -101,6 +116,9 @@
         background-repeat: no-repeat;
         background-position: 100% 15%;
         background-size: 93%;
+    }
+    .download__col-right-Dark {
+        background-image: url(../assets/img/download/mobile-screens-Dark.png);
     }
     @media (max-width: 900px) {
         .download__col-right {
