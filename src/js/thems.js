@@ -26,6 +26,7 @@ export default function thems() {
   const downloadColRight = document.querySelector(".download__col-right");
   const downloadSpan = document.querySelectorAll(".download__span");
   const downloadIcon = document.querySelectorAll(".download__icon");
+  const footerBox = document.querySelector(".footer__box");
 
   if (!headerThems) return;
 
@@ -46,6 +47,7 @@ export default function thems() {
     downloadColRight.classList.toggle("download__col-right-Dark");
     downloadIcon[0].classList.toggle("download__icon-dark");
     downloadIcon[1].classList.toggle("download__icon-dark");
+    footerBox.classList.toggle("footer__box-dark");
 
     container.forEach((elem) => {
       elem.classList.toggle("containner-dark");

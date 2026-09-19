@@ -94,6 +94,9 @@
         }
     }
 }
+.footer__box-dark {
+    background-color: $Overlay;
+}
 @media (max-width: 900px) {
     .footer__box {
         padding: 100px 60px;

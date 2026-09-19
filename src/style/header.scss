@@ -93,7 +93,7 @@
                 background-color: transparent;
             }
             &:hover .header__sun-dark {
-                background-color: rgba(64, 63, 61, 1);
+                background-color: $Overlay;
             }
             .header__moon {
                 display: flex;
