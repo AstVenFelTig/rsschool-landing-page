@@ -70,6 +70,13 @@
                 transform: scale(1) translateX(8px);
             }
         }
+        .hero__link-Dark {
+            background-color: $dark-bg-page;
+            color: $page;
+            &::after {
+                background-image: url(../assets/svg/coffeeDark.svg);
+            }
+        }
         @media (max-width: 900px) {
             .hero__link {
                 padding: 20px 65px;

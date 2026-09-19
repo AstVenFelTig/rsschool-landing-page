@@ -12,6 +12,8 @@ export default function thems() {
   const headerSun = document.querySelector(".header__sun");
   const headerSpanMenu = document.querySelector(".header__span-menu");
   const headerCup = document.querySelector(".header__cup");
+  const headerLink = document.querySelectorAll(".header__link");
+  const heroLink = document.querySelector(".hero__link");
 
   if (!headerThems) return;
 
@@ -20,10 +22,16 @@ export default function thems() {
     headerNav.classList.toggle("header__list-dark");
     headerSun.classList.toggle("header__sun-dark");
     headerSpanMenu.classList.toggle("header__span-menu-dark");
+    heroLink.classList.toggle("hero__link-Dark");
 
     container.forEach((elem) => {
       elem.classList.toggle("containner-dark");
     });
+
+    headerLink.forEach((elem) => {
+      elem.classList.toggle("header__link-Dark");
+    });
+
     moon.className.includes("active")
       ? (headerLogo.src = imgLogoDark)
       : (headerLogo.src = imgHeaderLogo);
