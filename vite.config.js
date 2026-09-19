@@ -9,6 +9,12 @@ export default defineConfig(({ command, mode }) => {
     build: {
       outDir: "docs",
       sourcemap: true,
+      rollupOptions: {
+        input: {
+          main: resolve(import.meta.dirname, "index.html"),
+          catalog: resolve(import.meta.dirname, "catalog.html"),
+        },
+      },
     },
     css: {
       devSourcemap: true,
