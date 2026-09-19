@@ -23,6 +23,7 @@
             gap: 40px;
             .header__item {
                 .header__link {
+                    color: inherit;
                     position: relative;
                     @include header-text;
                     &::after {
@@ -45,7 +46,11 @@
                 }
             }
         }
+        .header__list-dark {
+            color: $page;
+        }
     }
+
     @media (max-width: 900px) {
         .header__nav {
             display: none;
@@ -59,6 +64,7 @@
         .header__thems {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 8px;
             padding: 4px;
             width: 88px;
@@ -70,6 +76,22 @@
             svg {
                 width: 36px;
             }
+            .header__sun {
+                display: flex;
+                align-items: center;
+                border-radius: 40px;
+                width: 36px;
+                height: 36px;
+                transition: all 0.5s ease;
+                color: $inverse;
+                background-color: $accent;
+            }
+            .header__sun-dark {
+                background-color: transparent;
+            }
+            &:hover .header__sun-dark {
+                background-color: rgba(64, 63, 61, 1);
+            }
             .header__moon {
                 display: flex;
                 align-items: center;
@@ -77,6 +99,18 @@
                 width: 36px;
                 height: 36px;
                 transition: all 0.5s ease;
+            }
+            &:hover .header__moon {
+                background-color: $container;
+                color: $inverse;
+            }
+            .header__thems-active {
+                background-color: rgba(176, 144, 122, 1);
+                color: $inverse;
+            }
+            &:hover .header__thems-active {
+                background-color: rgba(176, 144, 122, 1);
+                color: $inverse;
             }
         }
         @media (max-width: 900px) {
@@ -88,10 +122,7 @@
                 }
             }
         }
-        .header__thems-active {
-            background-color: $container;
-            color: $inverse;
-        }
+
         .header__burger {
             display: flex;
             gap: 8px;
@@ -103,6 +134,12 @@
                 img {
                     display: none;
                 }
+            }
+            .header__span-menu {
+                font-weight: 600;
+            }
+            .header__span-menu-dark {
+                color: $page;
             }
         }
 

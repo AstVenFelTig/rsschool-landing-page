@@ -6,6 +6,6 @@ import slider from "./js/slider.js";
 import linkApp from "./js/download.js";
 const headerLogo = document.querySelector(".header__logo");
 headerLogo.src = imgHeaderLogo;
-thems();
 slider();
 linkApp();
+thems();
