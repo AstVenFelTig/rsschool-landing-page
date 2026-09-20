@@ -1,5 +1,6 @@
 import "./style/main.scss";
 import "inter-ui/inter.css";
+import "./style/header-catalog.scss";
 import thems from "./js/thems-catalog.js";
 import imgHeaderLogo from "./assets/logo.png";
 import cards from "./js/cards.js";

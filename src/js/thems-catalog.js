@@ -15,6 +15,12 @@ export default function thems() {
   const headerSpanMenu = document.querySelector(".header__span-menu");
   const headerCup = document.querySelector(".header__cup");
   const headerLink = document.querySelectorAll(".header__link");
+  const footerBox = document.querySelector(".footer__box");
+  const catalogTitle = document.querySelector(".catalog__title");
+  const catalogLabel = document.querySelectorAll(".catalog__label");
+  const catalogBox = document.querySelector(".catalog__box");
+  const catalogTabs = document.querySelectorAll(".catalog__tabs");
+  const headerBurger = document.querySelector(".header__burger");
 
   const darkOnShow = () => {
     wrapper.classList.toggle("wrapper-dark");
@@ -22,6 +28,18 @@ export default function thems() {
     headerNav.classList.toggle("header__list-dark");
     headerSun.classList.toggle("header__sun-dark");
     headerSpanMenu.classList.toggle("header__span-menu-dark");
+    footerBox.classList.toggle("footer__box-dark");
+    catalogTitle.classList.toggle("catalog__title-dark");
+    catalogBox.classList.toggle("catalog__box-dark");
+    headerBurger.classList.toggle("header__burger-dark");
+
+    catalogTabs.forEach((elem) => {
+      elem.classList.toggle("catalog__tabs-dark");
+    });
+
+    catalogLabel.forEach((elem) => {
+      elem.classList.toggle("catalog__label-dark");
+    });
 
     container.forEach((elem) => {
       elem.classList.toggle("containner-dark");
