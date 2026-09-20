@@ -33,6 +33,28 @@ a:active {
     text-decoration: none;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $page;
+}
+
+.wrapper-dark {
+    background-color: $dark-bg-page;
+}
+
+.header {
+    flex-shrink: 0;
+}
+
+.main {
+    flex: 1;
+}
+
+.footer {
+    flex-shrink: 0;
+}
 .main-box {
     display: flex;
     flex-direction: column;

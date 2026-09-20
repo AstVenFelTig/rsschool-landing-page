@@ -5,6 +5,7 @@ import coffeDark from "../assets/svg/coffeeDark.svg";
 
 export default function thems() {
   const DarkThem = { DarkThem: "Off" };
+  const wrapper = document.querySelector(".wrapper ");
   const headerThems = document.querySelector(".header__thems");
   const moon = document.querySelector(".header__moon");
   const container = document.querySelectorAll(".container");
@@ -16,6 +17,7 @@ export default function thems() {
   const headerLink = document.querySelectorAll(".header__link");
 
   const darkOnShow = () => {
+    wrapper.classList.toggle("wrapper-dark");
     moon.classList.toggle("header__thems-active");
     headerNav.classList.toggle("header__list-dark");
     headerSun.classList.toggle("header__sun-dark");
