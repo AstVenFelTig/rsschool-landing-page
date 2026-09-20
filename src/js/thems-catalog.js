@@ -4,6 +4,7 @@ import coffeCup from "../assets/svg/coffee-cup.svg";
 import coffeDark from "../assets/svg/coffeeDark.svg";
 
 export default function thems() {
+  const DarkThem = { DarkThem: "Off" };
   const headerThems = document.querySelector(".header__thems");
   const moon = document.querySelector(".header__moon");
   const container = document.querySelectorAll(".container");
@@ -13,9 +14,8 @@ export default function thems() {
   const headerSpanMenu = document.querySelector(".header__span-menu");
   const headerCup = document.querySelector(".header__cup");
   const headerLink = document.querySelectorAll(".header__link");
-  const heroLink = document.querySelector(".hero__link");
 
-  headerThems.addEventListener("click", () => {
+  const darkOnShow = () => {
     moon.classList.toggle("header__thems-active");
     headerNav.classList.toggle("header__list-dark");
     headerSun.classList.toggle("header__sun-dark");
@@ -36,5 +36,23 @@ export default function thems() {
     moon.className.includes("active")
       ? (headerCup.src = coffeDark)
       : (headerCup.src = coffeCup);
+  };
+
+  if (localStorage.getItem("user") !== null) {
+    const value = JSON.parse(localStorage.getItem("user"));
+    if (value.DarkThem === "On") {
+      darkOnShow();
+    }
+  }
+
+  headerThems.addEventListener("click", () => {
+    darkOnShow();
+    if (moon.className.includes("active")) {
+      DarkThem.DarkThem = "On";
+      localStorage.setItem("user", JSON.stringify({ DarkThem: "On" }));
+    } else {
+      DarkThem.DarkThem = "Off";
+      localStorage.setItem("user", JSON.stringify({ DarkThem: "Off" }));
+    }
   });
 }
