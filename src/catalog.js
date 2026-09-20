@@ -1,11 +1,9 @@
 import "./style/main.scss";
 import "inter-ui/inter.css";
+import thems from "./js/thems-catalog.js";
 import imgHeaderLogo from "./assets/logo.png";
-import thems from "./js/thems.js";
-import slider from "./js/slider.js";
-import linkApp from "./js/download.js";
+import cards from "./js/cards.js";
 const headerLogo = document.querySelector(".header__logo");
 headerLogo.src = imgHeaderLogo;
-slider();
-linkApp();
 thems();
+cards();

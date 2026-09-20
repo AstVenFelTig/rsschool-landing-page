@@ -12,7 +12,14 @@
         color: $accent;
     }
 }
-
+@media (max-width: 530px) {
+    .slider__title {
+        font-size: 32px;
+    }
+}
+.slider__title-dark {
+    color: $page;
+}
 .slider__box {
     position: relative;
     z-index: 1;
@@ -37,6 +44,7 @@
                 font-weight: 600;
                 line-height: 125%;
                 letter-spacing: 0%;
+                color: inherit;
             }
             .slider__text {
                 margin-bottom: 16px;
@@ -46,6 +54,7 @@
                 line-height: 150%;
                 letter-spacing: 0%;
                 text-align: center;
+                color: inherit;
             }
             .slider__price {
                 font-style: Semi Bold;
@@ -54,8 +63,17 @@
                 line-height: 125%;
                 letter-spacing: 0%;
                 text-align: center;
+                color: inherit;
             }
         }
+        @media (max-width: 530px) {
+            .slider__slide {
+                max-width: 348px;
+            }
+        }
+    }
+    .slider__track-dark {
+        color: $page;
     }
     .slider__pagination-box {
         display: flex;
@@ -68,8 +86,14 @@
             height: 4px;
             background-color: rgba(193, 182, 173, 1);
         }
+        .slider__pagination-dark {
+            background-color: rgba(102, 95, 85, 1);
+        }
         .slider__pagination-action {
             background-color: $container;
+        }
+        .slider__pagination-dark-active {
+            background-color: rgba(193, 182, 173, 1);
         }
     }
     .slider__arrows {
@@ -87,6 +111,7 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.5s ease;
+            color: inherit;
             &:hover {
                 background-color: $container;
                 color: $inverse;
@@ -104,11 +129,22 @@
             height: 60px;
             border: 1px solid $container;
             border-radius: 100px;
+            color: inherit;
             cursor: pointer;
             &:hover {
                 background-color: $container;
                 color: $inverse;
             }
+            .slider__arrows-dark {
+                border: 1px solid rgba(193, 182, 173, 1);
+                &:hover {
+                    background-color: $dark-bg-container;
+                    border: 1px solid transparent;
+                }
+            }
         }
+    }
+    .slider__arrows-dark {
+        color: $page;
     }
 }

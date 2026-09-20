@@ -1,0 +1,114 @@
+@use "./variables.scss" as *;
+
+.container__footer {
+    padding-bottom: 40px;
+    padding-top: 96px;
+}
+
+.footer__box {
+    padding: 100px;
+    background-color: $container;
+    border-radius: 40px;
+    gap: 100px;
+    display: flex;
+    align-items: center;
+    .footer__left {
+        flex: 1;
+        .footer__title {
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 125%;
+            color: $accent;
+            span {
+                color: $page;
+            }
+        }
+        @media (max-width: 530px) {
+            .footer__title {
+                font-size: 32px;
+                margin-bottom: 35px;
+            }
+        }
+        .footer__icons {
+            display: flex;
+            gap: 12px;
+            .footer__tvitter,
+            .footer__instagram,
+            .footer__fasеbook {
+                border: 1px solid rgba(193, 182, 173, 1);
+                padding: 18px;
+                border-radius: 100%;
+                color: $page;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                &:hover {
+                    background-color: $inverse;
+                    color: $Overlay;
+                }
+            }
+        }
+    }
+    .footer__right {
+        flex: 1;
+        .footer__subtitle {
+            color: $page;
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 125%;
+        }
+        .footer__list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .footer__item {
+                max-width: 198px;
+                .footer__link {
+                    position: relative;
+                    display: flex;
+                    gap: 8px;
+                    color: $page;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 150%;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -3px;
+                        height: 2px;
+                        background: $page;
+
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        transition: transform 0.5s ease;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}
+.footer__box-dark {
+    background-color: $Overlay;
+}
+@media (max-width: 900px) {
+    .footer__box {
+        padding: 100px 60px;
+        padding-bottom: 110px;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media (max-width: 530px) {
+    .footer__box {
+        padding: 60px 16px;
+        padding-bottom: 70px;
+        gap: 40px;
+    }
+}

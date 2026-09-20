@@ -1,0 +1,199 @@
+@use "./variables.scss" as *;
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .catalog__title {
+        max-width: 800px;
+        margin-bottom: 40px;
+        font-family: "Inter";
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 125%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $Overlay;
+        span {
+            color: $accent;
+        }
+    }
+    @media (max-width: 1010px) {
+        .catalog__title {
+            font-size: 32px;
+            line-height: 125%;
+        }
+    }
+}
+
+.catalog__box {
+    .catalog__box-tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 40px;
+        .catalog__tabs {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            width: 0;
+            height: 0;
+            margin: 0;
+        }
+        .catalog__label {
+            position: relative;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 8px 0px;
+            padding-right: 16px;
+            padding-left: 8px;
+            border-radius: 100px;
+            border: 1px solid rgba(193, 182, 173, 1);
+            font-style: Semi Bold;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: 0%;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            .catalog__span {
+                display: block;
+                width: 30px;
+                height: 30px;
+                background-color: #c1b6ad;
+                border-radius: 100px;
+                transition: all 0.5s ease;
+            }
+            .catalog__span-coffe {
+                background-image: url(../assets/img/menu/iconCofee.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 70% 70%;
+            }
+            .catalog__span-tea {
+                background-image: url(../assets/img/menu/iconTea.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 70% 70%;
+            }
+            .catalog__span-dessert {
+                background-image: url(../assets/img/menu/iconDessert.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 70% 70%;
+            }
+            &:hover {
+                background-color: $container;
+            }
+            &:hover .catalog__span {
+                background-color: $page;
+            }
+        }
+    }
+    .catalog__coffee,
+    .catalog__tea,
+    .catalog__dessert {
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        place-items: center;
+        flex-wrap: wrap;
+    }
+    &:has(#coffee:checked) .catalog__coffee {
+        display: grid;
+    }
+    &:has(#tea:checked) .catalog__tea {
+        display: grid;
+    }
+    &:has(#dessert:checked) .catalog__dessert {
+        display: grid;
+    }
+    .catalog__coffee,
+    .catalog__tea,
+    .catalog__dessert {
+        .catalog__card-box-coffee,
+        .catalog__card-box-tea,
+        .catalog__card-box-dessert {
+            display: flex;
+            flex-direction: column;
+            max-width: 310px;
+            height: 506px;
+            border-radius: 40px;
+            border: 1px solid rgba(193, 182, 173, 1);
+            overflow: hidden;
+            cursor: pointer;
+            .catalog__card-img {
+                width: 100%;
+                height: 310px;
+                margin-bottom: 20px;
+                object-fit: cover;
+                border-radius: 40px;
+                transition: all 0.5s ease;
+            }
+            .coffee__title,
+            .tea__title,
+            .dessert__title {
+                margin-bottom: 12px;
+                padding: 0px 20px;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 125%;
+                color: #403f3d;
+            }
+            .coffee__text,
+            .tea__text,
+            .dessert__text {
+                padding: 0px 20px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #403f3d;
+            }
+            .coffee__price,
+            .tea__price,
+            .dessert__price {
+                margin-top: auto;
+                margin-bottom: 20px;
+                padding: 0px 20px;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 125%;
+                color: #403f3d;
+            }
+            &:hover .catalog__card-img {
+                transform: scale(0.9);
+            }
+        }
+    }
+    @media (max-width: 1010px) {
+        .catalog__coffee,
+        .catalog__tea,
+        .catalog__dessert {
+            grid-template-columns: repeat(2, 1fr);
+            > :nth-child(n + 5) {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        .catalog__coffee,
+        .catalog__tea,
+        .catalog__dessert {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .catalog__update {
+        display: none;
+    }
+    @media (max-width: 1010px) {
+        .catalog__update {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 40px;
+        }
+    }
+}
