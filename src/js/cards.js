@@ -4,7 +4,6 @@ export default function cards() {
   const containerCoffee = document.querySelector(".catalog__coffee");
   const ccontainerTea = document.querySelector(".catalog__tea");
   const containerDessert = document.querySelector(".catalog__dessert");
-  const imgCofee = [];
 
   for (let index = 0; index < 8; index++) {
     containerCoffee.insertAdjacentHTML(
@@ -29,14 +28,14 @@ export default function cards() {
   cardBoxCoffee.forEach((elem, index) => {
     elem.insertAdjacentHTML(
       "beforeend",
-      `<img class="catalog__card-img" src="./src/assets/img/menu/coffee-${index + 1}.png" alt="pic coffee">`,
+      `<img class="catalog__card-img" src="/menu/coffee-${index + 1}.png" alt="pic coffee">`,
     );
   });
   const cardBoxTea = document.querySelectorAll(".catalog__card-box-tea");
   cardBoxTea.forEach((elem, index) => {
     elem.insertAdjacentHTML(
       "beforeend",
-      `<img class="catalog__card-img" src="./src/assets/img/menu/tea-${index + 1}.png" alt="pic tea">`,
+      `<img class="catalog__card-img" src="/menu/tea-${index + 1}.png" alt="pic tea">`,
     );
   });
   const cardBoxDessert = document.querySelectorAll(
@@ -45,7 +44,7 @@ export default function cards() {
   cardBoxDessert.forEach((elem, index) => {
     elem.insertAdjacentHTML(
       "beforeend",
-      `<img class="catalog__card-img" src="./src/assets/img/menu/dessert-${index + 1}.png" alt="pic dessrt">`,
+      `<img class="catalog__card-img" src="/menu/dessert-${index + 1}.png" alt="pic dessrt">`,
     );
   });
 
