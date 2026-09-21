@@ -18,6 +18,9 @@
             color: $accent;
         }
     }
+    .catalog__title-dark {
+        color: $page;
+    }
     @media (max-width: 1010px) {
         .catalog__title {
             font-size: 32px;
@@ -27,6 +30,7 @@
 }
 
 .catalog__box {
+    color: #403f3d;
     .catalog__box-tabs {
         display: flex;
         justify-content: center;
@@ -41,6 +45,21 @@
             height: 0;
             margin: 0;
         }
+        .catalog__tabs:checked + .catalog__label .catalog__span {
+            background-color: $page;
+        }
+        .catalog__tabs:checked + .catalog__label {
+            background-color: $container;
+        }
+
+        .catalog__tabs-dark:checked + .catalog__label .catalog__span {
+            background-color: $dark-bg-overlay;
+        }
+        .catalog__tabs-dark:checked + .catalog__label {
+            background-color: rgba(64, 63, 61, 1);
+            border: 1px solid rgba(64, 63, 61, 1);
+        }
+
         .catalog__label {
             position: relative;
             display: flex;
@@ -89,6 +108,16 @@
             }
             &:hover .catalog__span {
                 background-color: $page;
+            }
+        }
+        .catalog__label-dark {
+            color: $page;
+            &:hover {
+                background-color: rgba(64, 63, 61, 1);
+                border: 1px solid rgba(64, 63, 61, 1);
+            }
+            &:hover .catalog__span {
+                background-color: $dark-bg-overlay;
             }
         }
     }
@@ -140,7 +169,7 @@
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 125%;
-                color: #403f3d;
+                color: inherit;
             }
             .coffee__text,
             .tea__text,
@@ -149,7 +178,7 @@
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 150%;
-                color: #403f3d;
+                color: inherit;
             }
             .coffee__price,
             .tea__price,
@@ -160,7 +189,7 @@
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 125%;
-                color: #403f3d;
+                color: inherit;
             }
             &:hover .catalog__card-img {
                 transform: scale(0.9);
@@ -186,6 +215,10 @@
     }
     .catalog__update {
         display: none;
+        cursor: pointer;
+        &:hover {
+            color: $accent;
+        }
     }
     @media (max-width: 1010px) {
         .catalog__update {
@@ -196,4 +229,7 @@
             margin-top: 40px;
         }
     }
+}
+.catalog__box-dark {
+    color: $page;
 }
