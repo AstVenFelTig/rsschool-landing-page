@@ -90,6 +90,12 @@
                         transform: scaleX(1);
                     }
                 }
+                .footer__span {
+                    color: $page;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 150%;
+                }
             }
         }
     }
