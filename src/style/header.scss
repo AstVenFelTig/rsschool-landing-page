@@ -139,7 +139,24 @@
                 }
             }
             .header__span-menu {
+                position: relative;
                 font-weight: 600;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -3px;
+                    height: 2px;
+                    background: rgba(64, 63, 61, 1);
+
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: transform 0.5s ease;
+                }
+                &:hover::after {
+                    transform: scaleX(1);
+                }
             }
             .header__span-menu-dark {
                 color: $page;
