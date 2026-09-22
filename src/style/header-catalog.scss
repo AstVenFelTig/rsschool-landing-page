@@ -12,20 +12,15 @@
 .header__burger {
     color: inherit;
     position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -4px;
-        height: 2px;
-        background: rgba(64, 63, 61, 1);
-
-        transform: scaleX(0.8);
-        transform-origin: center;
-        transition: transform 0.5s ease;
+    a {
+        position: relative;
+        font-weight: 600;
+        &::after {
+            transform: scaleX(1) !important;
+        }
     }
 }
+
 @media (max-width: 900px) {
     .header__burger {
         &::after {
