@@ -1,0 +1,196 @@
+@use "./variables.scss" as *;
+
+@mixin header-text {
+    font-style: Semi Bold;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.header__box {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header__logo {
+        width: 100px;
+        object-fit: cover;
+    }
+    .header__nav {
+        .header__list {
+            display: flex;
+            gap: 40px;
+            .header__item {
+                .header__link {
+                    color: inherit;
+                    position: relative;
+                    @include header-text;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -3px;
+                        height: 2px;
+                        background: rgba(64, 63, 61, 1);
+
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        transition: transform 0.5s ease;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                    }
+                }
+                .header__link-Dark::after {
+                    background: $page;
+                }
+            }
+        }
+        .header__list-dark {
+            color: $page;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .header__nav {
+            display: none;
+        }
+    }
+    .header__menu {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-left: 43px;
+        .header__thems {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 4px;
+            width: 88px;
+            height: 44px;
+            border: 1px solid rgba(193, 182, 173, 1);
+            border-radius: 100px;
+
+            cursor: pointer;
+            svg {
+                width: 36px;
+            }
+            .header__sun {
+                display: flex;
+                align-items: center;
+                border-radius: 40px;
+                width: 36px;
+                height: 36px;
+                transition: all 0.5s ease;
+                color: $inverse;
+                background-color: $accent;
+            }
+            .header__sun-dark {
+                background-color: transparent;
+            }
+            &:hover .header__sun-dark {
+                background-color: $Overlay;
+            }
+            .header__moon {
+                display: flex;
+                align-items: center;
+                border-radius: 40px;
+                width: 36px;
+                height: 36px;
+                transition: all 0.5s ease;
+            }
+            &:hover .header__moon {
+                background-color: $container;
+                color: $inverse;
+            }
+            .header__thems-active {
+                background-color: rgba(176, 144, 122, 1);
+                color: $inverse;
+            }
+            &:hover .header__thems-active {
+                background-color: rgba(176, 144, 122, 1);
+                color: $inverse;
+            }
+        }
+        @media (max-width: 900px) {
+            .header__thems {
+                height: 52px;
+                width: 104px;
+                svg {
+                    width: 44px;
+                }
+            }
+        }
+
+        .header__burger {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            cursor: pointer;
+
+            @media (max-width: 900px) {
+                .header__span-menu,
+                img {
+                    display: none;
+                }
+            }
+            .header__span-menu {
+                position: relative;
+                font-weight: 600;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -3px;
+                    height: 2px;
+                    background: rgba(64, 63, 61, 1);
+
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: transform 0.5s ease;
+                }
+                &:hover::after {
+                    transform: scaleX(1);
+                }
+            }
+            .header__span-menu-dark {
+                color: $page;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .header__burger {
+                border-radius: 100px;
+                width: 44px;
+                height: 44px;
+                border: 1px solid rgba(102, 95, 85, 1);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                .footer__line {
+                    width: 16px;
+                    height: 2px;
+                    background-color: rgba(64, 63, 61, 1);
+                }
+            }
+        }
+    }
+    @media (max-width: 900px) {
+        .header__menu {
+            gap: 24px;
+        }
+    }
+    @media (max-width: 530px) {
+        .header__menu {
+            margin-left: 0px;
+            gap: 12px;
+        }
+    }
+}

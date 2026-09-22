@@ -1,0 +1,148 @@
+@use "./variables.scss" as *;
+
+.download__box {
+    display: flex;
+
+    .download__col-left {
+        flex: 1;
+        padding: 144px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .download__title {
+            max-width: 600px;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 60px;
+            line-height: 125%;
+            color: $Overlay;
+            font-style: Regular;
+
+            span {
+                font-style: italic;
+                color: $accent;
+            }
+        }
+        .download__title-dark {
+            color: $page;
+        }
+        @media (max-width: 530px) {
+            .download__title {
+                max-width: 320px;
+                font-size: 32px;
+            }
+        }
+        .download__text {
+            max-width: 600px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $Overlay;
+        }
+        .download__text-dark {
+            color: $page;
+        }
+        .download__box-app {
+            display: flex;
+            gap: 20px;
+            .download__apple {
+                width: 200px;
+                display: flex;
+                gap: 8px;
+                border: 1px solid rgba(102, 95, 85, 1);
+                border-radius: 100px;
+                padding: 12px 20px;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                &:hover {
+                    background-color: $container;
+                }
+
+                transition: all 0.5s ease;
+                .download__app-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                    .download__span:first-child {
+                        font-weight: 600;
+                        font-size: 10px;
+                        line-height: 140%;
+                        color: $Overlay;
+                    }
+                    .download__span:last-child {
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: $Overlay;
+                    }
+                    .download__span-dark:first-child {
+                        color: $page;
+                    }
+                    .download__span-dark:last-child {
+                        color: $page;
+                    }
+                }
+                &:hover > .download__app-text > .download__span {
+                    color: $page;
+                }
+                &:hover > .download__icon {
+                    color: $page;
+                }
+                .download__icon-dark {
+                    color: $page;
+                }
+            }
+        }
+        @media (max-width: 530px) {
+            .download__box-app {
+                flex-direction: column;
+            }
+        }
+    }
+    @media (max-width: 900px) {
+        .download__col-left {
+            padding: 0px;
+            flex: 0;
+            .download__text {
+                max-width: 670px;
+            }
+        }
+    }
+
+    .download__col-right {
+        flex: 1;
+        background-image: url(../assets/img/download/mobile-screens.png);
+        background-repeat: no-repeat;
+        background-position: 100% 15%;
+        background-size: 93%;
+    }
+    .download__col-right-Dark {
+        background-image: url(../assets/img/download/mobile-screens-Dark.png);
+    }
+    @media (max-width: 900px) {
+        .download__col-right {
+            flex-basis: 630px;
+            background-position: 50% 65%;
+        }
+    }
+    @media (max-width: 530px) {
+        .download__col-right {
+            flex-basis: 348px;
+            background-position: 70% 0%;
+            background-size: 100%;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .download__box {
+        flex-direction: column;
+        gap: 100px;
+    }
+}
+@media (max-width: 530px) {
+    .download__box {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
