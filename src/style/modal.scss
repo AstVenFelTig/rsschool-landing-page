@@ -1,0 +1,172 @@
+@use "./variables.scss" as *;
+.modal {
+    padding: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $page;
+    border-radius: 40px;
+    .modal__box {
+        display: flex;
+        gap: 20px;
+        .modal__box-img {
+            width: 340px;
+            height: 340px;
+            background-image: url(../assets/img/menu/coffee-1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 40px;
+        }
+        .modal__box-text {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            .modal__title {
+                margin-bottom: 12px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 125%;
+                letter-spacing: 0%;
+            }
+            .modal__text {
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: 0%;
+            }
+            .modal__span {
+                margin-bottom: 8px;
+                font-style: Regular;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: 0%;
+            }
+            .modal__size {
+                display: flex;
+                gap: 8px;
+                margin-bottom: 20px;
+                .modal__size-ml {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 8px 16px 8px 8px;
+                    border: 1px solid rgba(193, 182, 173, 1);
+                    border-radius: 100px;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+                    .modal__size-letter {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100px;
+                        background-color: rgba(193, 182, 173, 1);
+                        transition: all 0.5s ease;
+                    }
+                    &:hover {
+                        background-color: rgba(102, 95, 85, 1);
+                    }
+                    &:hover .modal__size-letter {
+                        background-color: $page;
+                    }
+                    &:hover .modal__size-num {
+                        color: $page;
+                    }
+                }
+            }
+            .modal__additives {
+                margin-bottom: 20px;
+                display: flex;
+                gap: 8px;
+                margin-bottom: 20px;
+                .modal__additives-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 8px 16px 8px 8px;
+                    border: 1px solid rgba(193, 182, 173, 1);
+                    border-radius: 100px;
+                    transition: all 0.5s ease;
+                    cursor: pointer;
+                    .modal__additives-num {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100px;
+                        background-color: rgba(193, 182, 173, 1);
+                        transition: all 0.5s ease;
+                    }
+                    &:hover {
+                        background-color: rgba(102, 95, 85, 1);
+                    }
+                    &:hover .modal__additives-num {
+                        background-color: $page;
+                    }
+                    &:hover .modal__additives-product {
+                        color: $page;
+                    }
+                }
+            }
+            .modal__totall {
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    display: block;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 125%;
+                    letter-spacing: 0%;
+                }
+            }
+            .modal__subtext {
+                margin-bottom: 32px;
+                position: relative;
+                left: 24px;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 140%;
+                letter-spacing: 0%;
+                max-width: 414px;
+                &::before {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 0;
+                    left: -24px;
+                    background-image: url(../assets/img/info-empty.png);
+                }
+            }
+            .modal__btn {
+                width: 100%;
+                padding: 10px 0px;
+                background-color: $page;
+                color: rgba(64, 63, 61, 1);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 150%;
+                letter-spacing: 0%;
+                border-radius: 100px;
+                border: 1px solid rgba(102, 95, 85, 1);
+                cursor: pointer;
+                transition: all 0.5s ease;
+                &:hover {
+                    background-color: rgba(102, 95, 85, 1);
+                    color: $page;
+                }
+            }
+        }
+    }
+}
