@@ -1,5 +1,22 @@
 @use "./variables.scss" as *;
+
+.body {
+    // overflow: hidden;
+}
+.body-active {
+    overflow: hidden;
+}
+.wrapper {
+    // filter: brightness(0.1);
+    // pointer-events: none;
+}
+.wrapper-active {
+    filter: brightness(0.1);
+    pointer-events: none;
+}
+
 .modal {
+    display: none;
     padding: 16px;
     position: fixed;
     top: 50%;
@@ -169,4 +186,7 @@
             }
         }
     }
+}
+.modal-active {
+    display: block;
 }
