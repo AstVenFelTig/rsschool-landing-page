@@ -205,6 +205,11 @@
                 display: none;
             }
         }
+        .catalog__btn-active {
+            > :nth-child(n + 5) {
+                display: block;
+            }
+        }
     }
     @media (max-width: 500px) {
         .catalog__coffee,
@@ -227,6 +232,9 @@
             justify-content: center;
             display: flex;
             margin-top: 40px;
+        }
+        .catalog__update-inactive {
+            display: none;
         }
     }
 }
