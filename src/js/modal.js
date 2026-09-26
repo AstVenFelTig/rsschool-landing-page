@@ -69,7 +69,7 @@ export default function modal() {
 
   const getDataCard = (parent) => {
     const imgIndex = parent.children[0].src.split("menu");
-    const pathImg = `url(/menu${imgIndex[1]})`;
+    const pathImg = `url(./menu${imgIndex[1]})`;
     modalImg.style.backgroundImage = pathImg;
 
     modalTitle.textContent = parent.children[1].textContent;
