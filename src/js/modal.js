@@ -15,6 +15,10 @@ export default function modal() {
   const modalAdditivesProduct = document.querySelectorAll(
     ".modal__additives-product",
   );
+  const modalSizeProduct = document.querySelectorAll(".modal__size-ml");
+  const modalAdditivesItem = document.querySelectorAll(
+    ".modal__additives-item",
+  );
   const modalSizeNum = document.querySelectorAll(".modal__size-num");
   let counterOpen = 0;
 
@@ -67,7 +71,16 @@ export default function modal() {
     removeBlockContainer();
   });
 
+  let priceCurrent = "";
+  let nameCurrent = "";
+  const indexSizeProduct = ["s", "m", "l"];
+  let Sizecurrent = 0;
+  let additivesCurrent = 0;
+
   const getDataCard = (parent) => {
+    removeSizeProduct(modalAdditivesItem);
+    removeSizeProduct(modalSizeProduct);
+
     const imgIndex = parent.children[0].src.split("menu");
     const pathImg = `url(./menu${imgIndex[1]})`;
     modalImg.style.backgroundImage = pathImg;
@@ -75,9 +88,12 @@ export default function modal() {
     modalTitle.textContent = parent.children[1].textContent;
     modalText.textContent = parent.children[2].textContent;
 
+    nameCurrent = parent.children[1].textContent;
+
     products.forEach((elem) => {
       if (elem.name === parent.children[1].textContent) {
         modalPrice.textContent = elem.price;
+        priceCurrent = elem.price;
       }
     });
   };
@@ -93,5 +109,56 @@ export default function modal() {
     body.classList.remove("body-active");
     modal.classList.remove("modal-active");
     counterOpen = 0;
+  };
+
+  const showTotalPrice = () => {
+    const totall = Number(priceCurrent) + Sizecurrent + additivesCurrent;
+    modalPrice.textContent = totall;
+  };
+
+  modalSizeProduct.forEach((elem, index) => {
+    elem.addEventListener("click", (e) => {
+      removeSizeProduct(modalSizeProduct);
+      modalSizeProduct[index].classList.add("modal__size-ml-active");
+      products.forEach((elem) => {
+        if (elem.name === nameCurrent) {
+          Sizecurrent = Number(Object.values(elem.sizes)[index]["add-price"]);
+          showTotalPrice();
+        }
+      });
+    });
+  });
+
+  modalAdditivesItem.forEach((elem, index) => {
+    let price = 0;
+
+    const showProduct = () => {
+      products.forEach((elem) => {
+        if (elem.name === nameCurrent) {
+          price = Number(Object.values(elem.additives)[index]["add-price"]);
+        }
+      });
+    };
+
+    elem.addEventListener("click", (e) => {
+      if (elem.className.includes("modal__additives-active")) {
+        modalAdditivesItem[index].classList.toggle("modal__additives-active");
+        showProduct();
+        additivesCurrent -= price;
+        showTotalPrice();
+      } else {
+        modalAdditivesItem[index].classList.toggle("modal__additives-active");
+        showProduct();
+        additivesCurrent += price;
+        showTotalPrice();
+      }
+    });
+  });
+
+  const removeSizeProduct = (typeProdyct) => {
+    typeProdyct.forEach((elem) => {
+      elem.classList.remove("modal__size-ml-active");
+      elem.classList.remove("modal__additives-active");
+    });
   };
 }

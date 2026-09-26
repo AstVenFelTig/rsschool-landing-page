@@ -96,6 +96,15 @@
                         color: $page;
                     }
                 }
+                .modal__size-ml-active {
+                    background-color: rgba(102, 95, 85, 1);
+                    .modal__size-letter {
+                        background-color: $page;
+                    }
+                    .modal__size-num {
+                        color: $page;
+                    }
+                }
             }
             .modal__additives {
                 margin-bottom: 20px;
@@ -130,6 +139,15 @@
                     &:hover .modal__additives-product {
                         color: $page;
                     }
+                }
+            }
+            .modal__additives-active {
+                background-color: rgba(102, 95, 85, 1);
+                .modal__additives-num {
+                    background-color: $page;
+                }
+                .modal__additives-product {
+                    color: $page;
                 }
             }
             .modal__totall {
