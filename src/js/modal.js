@@ -20,6 +20,7 @@ export default function modal() {
     ".modal__additives-item",
   );
   const modalSizeNum = document.querySelectorAll(".modal__size-num");
+
   let counterOpen = 0;
 
   body.addEventListener("click", (e) => {
@@ -80,6 +81,7 @@ export default function modal() {
   const getDataCard = (parent) => {
     removeSizeProduct(modalAdditivesItem);
     removeSizeProduct(modalSizeProduct);
+    modalSizeProduct[0].classList.add("modal__size-ml-active");
 
     const imgIndex = parent.children[0].src.split("menu");
     const pathImg = `url(./menu${imgIndex[1]})`;
@@ -112,8 +114,14 @@ export default function modal() {
   };
 
   const showTotalPrice = () => {
-    const totall = Number(priceCurrent) + Sizecurrent + additivesCurrent;
-    modalPrice.textContent = totall;
+    const totall = String(
+      Number(priceCurrent) + Sizecurrent + additivesCurrent,
+    );
+    if (totall.length < 3) {
+      modalPrice.textContent = totall.padEnd(4, ".00");
+    } else {
+      modalPrice.textContent = totall.padEnd(4, "0");
+    }
   };
 
   modalSizeProduct.forEach((elem, index) => {
