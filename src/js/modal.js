@@ -24,8 +24,20 @@ export default function modal() {
   let counterOpen = 0;
 
   body.addEventListener("click", (e) => {
+    // if (body.className.includes("body-active")) {
+    //   return;
+    // } else {
+    //   const parentBody = e.target.closest(".modal");
+    //   if (body.className.includes("body-active-modal") && !parentBody) {
+    //     counterOpen += 1; //костылище - игнорируем первое открытие
+    //   }
+    //   if (!parentBody && counterOpen > 1) {
+    //     removeBlockContainer();
+    //   }
+    // }
+
     const parentBody = e.target.closest(".modal");
-    if (body.className.includes("body-active") && !parentBody) {
+    if (body.className.includes("body-active-modal") && !parentBody) {
       counterOpen += 1; //костылище - игнорируем первое открытие
     }
     if (!parentBody && counterOpen > 1) {
@@ -106,13 +118,19 @@ export default function modal() {
 
   const addBlockContainer = () => {
     wrapper.classList.add("wrapper-active");
-    body.classList.add("body-active");
+    body.classList.add("body-active-modal");
     modal.classList.add("modal-active");
   };
 
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      removeBlockContainer();
+    }
+  });
+
   const removeBlockContainer = () => {
     wrapper.classList.remove("wrapper-active");
-    body.classList.remove("body-active");
+    body.classList.remove("body-active-modal");
     modal.classList.remove("modal-active");
     counterOpen = 0;
   };
