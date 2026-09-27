@@ -21,6 +21,11 @@ export default function thems() {
   const catalogBox = document.querySelector(".catalog__box");
   const catalogTabs = document.querySelectorAll(".catalog__tabs");
   const headerBurger = document.querySelector(".header__burger");
+  const modal = document.querySelector(".modal");
+  const modalSize = document.querySelectorAll(".modal__size-ml");
+  const modaladditivesItem = document.querySelectorAll(
+    ".modal__additives-item",
+  );
 
   const darkOnShow = () => {
     wrapper.classList.toggle("wrapper-dark");
@@ -32,6 +37,15 @@ export default function thems() {
     catalogTitle.classList.toggle("catalog__title-dark");
     catalogBox.classList.toggle("catalog__box-dark");
     headerBurger.classList.toggle("header__burger-dark");
+    modal.classList.toggle("modal-dark");
+
+    modaladditivesItem.forEach((elem) => {
+      elem.classList.toggle("modal__additives-item-dark");
+    });
+
+    modalSize.forEach((elem) => {
+      elem.classList.toggle("modal__size-ml-dark");
+    });
 
     catalogTabs.forEach((elem) => {
       elem.classList.toggle("catalog__tabs-dark");
