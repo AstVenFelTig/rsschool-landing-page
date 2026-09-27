@@ -96,6 +96,7 @@
                         color: $page;
                     }
                 }
+
                 .modal__size-ml-active {
                     background-color: rgba(102, 95, 85, 1);
                     .modal__size-letter {
@@ -103,6 +104,26 @@
                     }
                     .modal__size-num {
                         color: $page;
+                    }
+                }
+
+                .modal__size-ml-dark {
+                    border: 1px solid rgba(102, 95, 85, 1);
+                    background-color: #403f3d;
+                    .modal__size-letter {
+                        background: rgba(102, 95, 85, 1);
+                    }
+                    &:hover {
+                        background: rgba(41, 40, 38, 1);
+                    }
+                    &:hover .modal__size-letter {
+                        background: rgba(102, 95, 85, 1);
+                    }
+                }
+                .modal__size-ml-active-dark {
+                    background-color: rgba(41, 40, 38, 1);
+                    .modal__size-letter {
+                        background: rgba(102, 95, 85, 1);
                     }
                 }
             }
@@ -140,6 +161,19 @@
                         color: $page;
                     }
                 }
+                .modal__additives-item-dark {
+                    border: 1px solid rgba(102, 95, 85, 1);
+                    background-color: #403f3d;
+                    .modal__additives-num {
+                        background: rgba(102, 95, 85, 1);
+                    }
+                    &:hover {
+                        background: rgba(41, 40, 38, 1);
+                    }
+                    &:hover .modal__additives-num {
+                        background: rgba(102, 95, 85, 1);
+                    }
+                }
             }
             .modal__additives-active {
                 background-color: rgba(102, 95, 85, 1);
@@ -148,6 +182,12 @@
                 }
                 .modal__additives-product {
                     color: $page;
+                }
+            }
+            .modal__additives-active-dark {
+                background: rgba(41, 40, 38, 1) !important;
+                .modal__additives-num {
+                    background: rgba(102, 95, 85, 1) !important;
                 }
             }
             .modal__totall {
@@ -204,6 +244,10 @@
             }
         }
     }
+}
+.modal-dark {
+    background-color: #403f3d;
+    color: $page;
 }
 .modal-active {
     display: block;

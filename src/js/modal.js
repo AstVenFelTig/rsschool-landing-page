@@ -81,7 +81,11 @@ export default function modal() {
   const getDataCard = (parent) => {
     removeSizeProduct(modalAdditivesItem);
     removeSizeProduct(modalSizeProduct);
-    modalSizeProduct[0].classList.add("modal__size-ml-active");
+    if (modalSizeProduct[0].className.includes("modal__size-ml-dark")) {
+      modalSizeProduct[0].classList.add("modal__size-ml-active-dark");
+    } else {
+      modalSizeProduct[0].classList.add("modal__size-ml-active");
+    }
 
     const imgIndex = parent.children[0].src.split("menu");
     const pathImg = `url(./menu${imgIndex[1]})`;
@@ -127,7 +131,11 @@ export default function modal() {
   modalSizeProduct.forEach((elem, index) => {
     elem.addEventListener("click", (e) => {
       removeSizeProduct(modalSizeProduct);
-      modalSizeProduct[index].classList.add("modal__size-ml-active");
+      if (modalSizeProduct[0].className.includes("modal__size-ml-dark")) {
+        modalSizeProduct[index].classList.add("modal__size-ml-active-dark");
+      } else {
+        modalSizeProduct[index].classList.add("modal__size-ml-active");
+      }
       products.forEach((elem) => {
         if (elem.name === nameCurrent) {
           Sizecurrent = Number(Object.values(elem.sizes)[index]["add-price"]);
@@ -149,16 +157,34 @@ export default function modal() {
     };
 
     elem.addEventListener("click", (e) => {
-      if (elem.className.includes("modal__additives-active")) {
-        modalAdditivesItem[index].classList.toggle("modal__additives-active");
-        showProduct();
-        additivesCurrent -= price;
-        showTotalPrice();
+      if (elem.className.includes("modal__additives-item-dark")) {
+        if (elem.className.includes("modal__additives-active-dark")) {
+          modalAdditivesItem[index].classList.toggle(
+            "modal__additives-active-dark",
+          );
+          showProduct();
+          additivesCurrent -= price;
+          showTotalPrice();
+        } else {
+          modalAdditivesItem[index].classList.toggle(
+            "modal__additives-active-dark",
+          );
+          showProduct();
+          additivesCurrent += price;
+          showTotalPrice();
+        }
       } else {
-        modalAdditivesItem[index].classList.toggle("modal__additives-active");
-        showProduct();
-        additivesCurrent += price;
-        showTotalPrice();
+        if (elem.className.includes("modal__additives-active")) {
+          modalAdditivesItem[index].classList.toggle("modal__additives-active");
+          showProduct();
+          additivesCurrent -= price;
+          showTotalPrice();
+        } else {
+          modalAdditivesItem[index].classList.toggle("modal__additives-active");
+          showProduct();
+          additivesCurrent += price;
+          showTotalPrice();
+        }
       }
     });
   });
@@ -167,6 +193,8 @@ export default function modal() {
     typeProdyct.forEach((elem) => {
       elem.classList.remove("modal__size-ml-active");
       elem.classList.remove("modal__additives-active");
+      elem.classList.remove("modal__additives-active-dark");
+      elem.classList.remove("modal__size-ml-active-dark");
     });
   };
 }
