@@ -122,6 +122,12 @@ export default function modal() {
     modal.classList.add("modal-active");
   };
 
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      removeBlockContainer();
+    }
+  });
+
   const removeBlockContainer = () => {
     wrapper.classList.remove("wrapper-active");
     body.classList.remove("body-active-modal");

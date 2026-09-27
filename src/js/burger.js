@@ -25,8 +25,8 @@ export default function burger() {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      burgerList.classList.toggle("header__burger-list-active");
-      body.classList.toggle("body-active");
+      burgerList.classList.remove("header__burger-list-active");
+      body.classList.remove("body-active");
     }
   });
 }
