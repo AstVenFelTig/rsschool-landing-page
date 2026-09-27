@@ -16,11 +16,17 @@ export default function burger() {
 
   burgerLink.forEach((elem) => {
     elem.addEventListener("click", (e) => {
-      console.log("link");
       if (e.target.className === "header__burger-link") {
         burgerList.classList.toggle("header__burger-list-active");
         body.classList.toggle("body-active");
       }
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      burgerList.classList.toggle("header__burger-list-active");
+      body.classList.toggle("body-active");
+    }
   });
 }
