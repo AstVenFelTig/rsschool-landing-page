@@ -208,6 +208,12 @@
                 }
             }
         }
+        .header__burger-list-active-Dark {
+            background-color: #292826;
+            li {
+                color: $page;
+            }
+        }
         @media (max-width: 900px) {
             .header__burger {
                 border-radius: 100px;

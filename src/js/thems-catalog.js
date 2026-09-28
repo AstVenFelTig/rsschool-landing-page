@@ -26,6 +26,7 @@ export default function thems() {
   const modaladditivesItem = document.querySelectorAll(
     ".modal__additives-item",
   );
+  const headerBurgerList = document.querySelector(".header__burger-list");
 
   const darkOnShow = () => {
     wrapper.classList.toggle("wrapper-dark");
@@ -38,6 +39,7 @@ export default function thems() {
     catalogBox.classList.toggle("catalog__box-dark");
     headerBurger.classList.toggle("header__burger-dark");
     modal.classList.toggle("modal-dark");
+    headerBurgerList.classList.toggle("header__burger-list-active-Dark");
 
     modaladditivesItem.forEach((elem) => {
       elem.classList.toggle("modal__additives-item-dark");
