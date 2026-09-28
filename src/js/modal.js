@@ -193,11 +193,16 @@ export default function modal() {
         }
       } else {
         if (elem.className.includes("modal__additives-active")) {
+          console.log("No");
           modalAdditivesItem[index].classList.toggle("modal__additives-active");
+          modalAdditivesItem[index].classList.remove(
+            "modal__additives-item:hover",
+          );
           showProduct();
           additivesCurrent -= price;
           showTotalPrice();
         } else {
+          console.log("yes");
           modalAdditivesItem[index].classList.toggle("modal__additives-active");
           showProduct();
           additivesCurrent += price;
