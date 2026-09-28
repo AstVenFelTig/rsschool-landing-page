@@ -62,9 +62,9 @@ export default function thems() {
     });
 
     sliderPagination.forEach((elem) => {
-      elem.classList.toggle("slider__pagination-dark");
+      // elem.classList.toggle("slider__pagination-dark");
     });
-    sliderPagination[0].classList.toggle("slider__pagination-dark-active");
+    // sliderPagination[0].classList.toggle("slider__pagination-dark-active");
 
     downloadSpan.forEach((elem) => {
       elem.classList.toggle("download__span-dark");
