@@ -30,6 +30,7 @@ export default function thems() {
   const downloadSpan = document.querySelectorAll(".download__span");
   const downloadIcon = document.querySelectorAll(".download__icon");
   const footerBox = document.querySelector(".footer__box");
+  const headerBurgerList = document.querySelector(".header__burger-list");
 
   const darkOn = () => {
     wrapper.classList.toggle("wrapper-dark");
@@ -50,6 +51,7 @@ export default function thems() {
     downloadIcon[0].classList.toggle("download__icon-dark");
     downloadIcon[1].classList.toggle("download__icon-dark");
     footerBox.classList.toggle("footer__box-dark");
+    headerBurgerList.classList.toggle("header__burger-list-active-Dark");
 
     container.forEach((elem) => {
       elem.classList.toggle("containner-dark");
