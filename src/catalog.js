@@ -1,0 +1,18 @@
+import "./style/main.scss";
+import "inter-ui/inter.css";
+import "./style/header-catalog.scss";
+import thems from "./js/thems-catalog.js";
+import imgHeaderLogo from "./assets/logo.png";
+import cards from "./js/cards.js";
+import link from "./js/link.js";
+import burger from "./js/burger.js";
+import btnCatalog from "./js/btnCatalogUpdate.js";
+import modal from "./js/modal.js";
+const headerLogo = document.querySelector(".header__logo");
+headerLogo.src = imgHeaderLogo;
+thems();
+cards();
+link();
+burger();
+btnCatalog();
+modal();

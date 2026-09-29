@@ -1,0 +1,62 @@
+@use "./variables.scss" as *;
+.header__box {
+    .header__link-logo:hover .header__logo {
+        transform: scale(1.1);
+    }
+    .header__link-logo {
+        .header__logo {
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+.header__burger {
+    color: inherit;
+    position: relative;
+    pointer-events: none;
+    a {
+        position: relative;
+        font-weight: 600;
+        &::after {
+            transform: scaleX(1) !important;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .header__burger {
+        pointer-events: all;
+    }
+    .header__burger-active {
+        .footer__line-top {
+            transform: rotate(-45deg) translateY(5px) translateX(-3px);
+        }
+        .footer__line-bottom {
+            transform: rotate(45deg) translateY(-4px) translateX(-3px);
+        }
+    }
+}
+
+.header__burger-list {
+    &:last-child {
+        // pointer-events: none;
+    }
+}
+.header__burger-list-active-Dark {
+    background-color: #292826;
+    li {
+        color: $page;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__burger {
+        &::after {
+            display: none;
+        }
+    }
+}
+.header__burger-dark {
+    &::after {
+        background: #e1d4c9;
+    }
+}
