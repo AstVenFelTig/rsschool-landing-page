@@ -54,7 +54,7 @@
         }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
         .header__nav {
             display: none;
         }
@@ -116,7 +116,7 @@
                 color: $inverse;
             }
         }
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
             .header__thems {
                 height: 52px;
                 width: 104px;
@@ -133,7 +133,7 @@
             align-items: center;
             cursor: pointer;
 
-            @media (max-width: 900px) {
+            @media (max-width: 768px) {
                 .header__span-menu,
                 img {
                     display: none;
@@ -214,7 +214,7 @@
                 color: $page;
             }
         }
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
             .header__burger {
                 border-radius: 100px;
                 width: 44px;
