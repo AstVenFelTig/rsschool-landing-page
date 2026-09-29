@@ -253,6 +253,27 @@
         }
     }
 }
+@media (max-width: 800px) {
+    .modal__box {
+        .modal__box-img {
+            display: none;
+        }
+        .modal__box-text {
+            .modal__size {
+                flex-wrap: wrap;
+                max-width: 250px;
+            }
+            .modal__additives {
+                flex-wrap: wrap;
+                max-width: 260px;
+            }
+        }
+        .modal__subtext {
+            left: 15px !important;
+            width: 286px;
+        }
+    }
+}
 .modal-dark {
     background-color: #403f3d;
     color: $page;
