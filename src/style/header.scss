@@ -229,6 +229,15 @@
                     width: 16px;
                     height: 2px;
                     background-color: rgba(64, 63, 61, 1);
+                    transition: all 0.5s ease;
+                }
+            }
+            .header__burger-active {
+                .footer__line-top {
+                    transform: rotate(-45deg) translateY(5px) translateX(-3px);
+                }
+                .footer__line-bottom {
+                    transform: rotate(45deg) translateY(-4px) translateX(-3px);
                 }
             }
         }
