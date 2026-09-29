@@ -22,9 +22,17 @@
         }
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .header__burger {
         pointer-events: all;
+    }
+    .header__burger-active {
+        .footer__line-top {
+            transform: rotate(-45deg) translateY(5px) translateX(-3px);
+        }
+        .footer__line-bottom {
+            transform: rotate(45deg) translateY(-4px) translateX(-3px);
+        }
     }
 }
 
@@ -40,7 +48,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .header__burger {
         &::after {
             display: none;

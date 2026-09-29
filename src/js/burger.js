@@ -12,6 +12,8 @@ export default function burger() {
       burgerList.classList.toggle("header__burger-list-active");
       body.classList.toggle("body-active");
     }
+
+    headerBurger.classList.toggle("header__burger-active");
   });
 
   burgerLink.forEach((elem) => {
@@ -27,6 +29,7 @@ export default function burger() {
     if (event.key === "Escape") {
       burgerList.classList.remove("header__burger-list-active");
       body.classList.remove("body-active");
+      headerBurger.classList.remove("header__burger-active");
     }
   });
 }
